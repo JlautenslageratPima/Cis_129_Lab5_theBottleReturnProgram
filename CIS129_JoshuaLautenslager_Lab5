@@ -1,0 +1,38 @@
+# Lab 5: The Bottle Return Program
+#Joshua Lautenslager
+# Cis 129 
+
+
+# Step 1: Declare variables
+total_bottles = 0
+total_payout = 0
+
+# Step 2: Loop to run program again
+while True:
+    # Step 3: Code to set value of variables
+    # Code to set value of variable total_bottles 
+    # Code to set value of variable total_payout
+    total_bottles = 0
+    total_payout = 0
+
+    # getBottles function call
+    NBR_OF_DAYS = 7
+    counter = 1
+    while counter <= NBR_OF_DAYS:
+        print("Enter number of bottles returned for day #", counter, ":")
+        today_bottles = int(input())
+        total_bottles += today_bottles
+        counter += 1
+
+    # calcPayout function call
+    PAYOUT_PER_BOTTLE = 0.10
+    total_payout = total_bottles * PAYOUT_PER_BOTTLE
+
+    # printInfo function call
+    print("\nThe total number of bottles collected is", total_bottles)
+    print("The total paid out is $", format(total_payout, '.2f'))
+
+    print("\nDo you want to enter another week’s worth of data? (Enter y or n):")
+    keep_going = input()
+    if keep_going.lower() != 'y':
+        break
